@@ -1,0 +1,9 @@
+{% load static %}
+<h1>Публикации</h1>
+<ul>
+    {% for post in posts %}
+    <li>
+        <a href="{% url 'blog:post_detail' post.id %}">{{ post.text }}</a>
+    </li>
+    {% endfor %}
+</ul>
